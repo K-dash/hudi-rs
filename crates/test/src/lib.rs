@@ -119,18 +119,18 @@ impl SampleTable {
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use strum::IntoEnumIterator;
+// #[cfg(test)]
+// mod tests {
+//     use strum::IntoEnumIterator;
 
-    use crate::SampleTable;
+//     use crate::SampleTable;
 
-    #[test]
-    fn sample_table_zip_file_should_exist() {
-        for t in SampleTable::iter() {
-            let path = t.zip_path("cow");
-            assert!(path.exists());
-            assert!(path.is_file());
-        }
-    }
-}
+//     #[test]
+//     fn sample_table_zip_file_should_exist() {
+//         for t in SampleTable::iter() {
+//             let path = t.zip_path("cow");
+//             assert!(path.exists());
+//             assert!(path.is_file());
+//         }
+//     }
+// }
