@@ -64,7 +64,7 @@ jobs:
       - name: Cache dependencies
         uses: Swatinem/rust-cache@v2
       - name: Complile rust
-        run: cargo tarpaulin --no-run --locked
+        run: cargo tarpaulin --engine llvm --no-run --locked
       - name: Rust unit tests with coverage report
         # https://github.com/xd009642/tarpaulin/issues/1092#issuecomment-1407739176
         run: cargo tarpaulin --engine llvm --no-dead-code --no-fail-fast --all-features --workspace -o xml --output-dir ./cov-reports
