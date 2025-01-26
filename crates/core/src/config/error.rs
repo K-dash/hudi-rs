@@ -36,6 +36,7 @@ pub enum ConfigError {
     #[error("Failed to parse line: {0}'")]
     ParseLine(String),
 
+    /// test comment
     #[error("Config value '{0}' is not valid")]
     InvalidValue(String),
 
